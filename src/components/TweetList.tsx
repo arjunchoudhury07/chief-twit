@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import { RouterOutputs, trpc } from "../utils/trpc";
 import relativeTime from "dayjs/plugin/relativeTime";
 import updateLocal from "dayjs/plugin/updateLocale";
-import { UseInfiniteQueryOptions } from "@tanstack/react-query";
 
 dayjs.extend(relativeTime);
 dayjs.extend(updateLocal);
@@ -107,11 +106,11 @@ export const TweetList = () => {
   }, [scrollPosition, hasNextPage, isFetching, fetchNextPage]);
 
   return (
-    <div className="flex  w-full flex-col items-center gap-9 p-2">
+    <div className="flex min-h-screen  w-full flex-col items-center gap-9 p-2">
       {tweets.map((tweet) => {
         return <Tweet key={tweet.id} tweet={tweet} />;
       })}
-      {!hasNextPage && <div>End of The List</div>}
+      {!hasNextPage && data && <div>End of The List</div>}
     </div>
   );
 };
