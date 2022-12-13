@@ -7,7 +7,7 @@ export function TweetForm() {
   const [error, setError] = useState("");
 
   const handleTweet = (e: React.MouseEvent<HTMLButtonElement>) => {
-    // e.preventDefault();
+    e.preventDefault();
     if (text.length < 3) {
       setError("Tweet must be more than 3 characters long");
     }
