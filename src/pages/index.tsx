@@ -1,10 +1,6 @@
 import { type NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
-import { signIn, signOut, useSession } from "next-auth/react";
-import { trpc } from "../utils/trpc";
-import { useState } from "react";
+import { useSession } from "next-auth/react";
 import { Banner } from "../components/Banner";
 import LeftPanel from "../components/LeftPanel";
 import { Navbar } from "../components/Navbar";
@@ -25,7 +21,7 @@ const Home: NextPage = () => {
       <div className="flex justify-center text-white">
         <LeftPanel />
 
-        <main className="flex w-6/12 flex-col items-center border-l-2 border-r-2 border-gray-700 bg-gray-900">
+        <main className="flex w-6/12 flex-col items-center border-l-2 border-r-2 border-gray-700 bg-gray-900 ">
           <Navbar />
           <TweetForm />
           <TweetList />
