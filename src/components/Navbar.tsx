@@ -3,10 +3,10 @@ import React from "react";
 export function Navbar() {
   return (
     <nav className="w-full bg-gray-900">
-      <div className="flex items-center justify-center gap-x-2">
-        <h1 className="my-6  text-center text-4xl font-bold">Cheif </h1>
-        <h2 className="my-6 rounded-xl bg-slate-600 px-3 py-1 text-center text-4xl font-bold">
-          Twit
+      <div className="my-4 flex items-center justify-center gap-x-2">
+        <h1 className="text-4xl font-bold">Chief </h1>
+        <h2 className="rounded-xl bg-blue-400 px-3 py-1 pb-2 text-center text-4xl font-bold text-black">
+          <p>Twit</p>
         </h2>
       </div>
 
